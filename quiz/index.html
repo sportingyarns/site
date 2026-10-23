@@ -216,8 +216,14 @@ function sportMenu() {
 }
 
 function startDaily() {
-  const rnd = seeded("sy-" + todayKey());
-  begin(shuffleWith(BANK, rnd).slice(0, ROUND), { label: `Today's ten · ${todayLabel()}`, daily: true });
+  // Works through the whole bank in a fixed order, ten a day, so Today's ten never repeats until every question has been used.
+  const hash = (str) => { let h = 2166136261; for (const c of str) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+  const order = BANK.slice().sort((a, b) => hash(a.q) - hash(b.q));
+  const [y, m, d] = todayKey().split("-").map(Number);
+  const day = Math.round((Date.UTC(y, m - 1, d) - Date.UTC(2026, 9, 26)) / 864e5);
+  const n = order.length, start = (((day * ROUND) % n) + n) % n;
+  const list = Array.from({ length: Math.min(ROUND, n) }, (_, k) => order[(start + k) % n]);
+  begin(list, { label: `Today's ten · ${todayLabel()}`, daily: true });
 }
 
 function startQuick() {

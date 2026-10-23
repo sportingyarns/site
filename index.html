@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sporting Yarns | A good yarn about Australian sport</title>
+<meta name="description" content="Stories from Australian sport you forgot, or never knew. Follow @sportingyarns and play the daily quiz.">
+<meta name="theme-color" content="#0E3A12">
+<link rel="icon" type="image/png" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sporting Yarns">
+<meta property="og:title" content="Sporting Yarns">
+<meta property="og:description" content="A good yarn about Australian sport. Stories you forgot, or never knew.">
+<meta property="og:url" content="https://sportingyarns.au/">
+<meta property="og:image" content="https://sportingyarns.au/assets/og-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap">
+<style>
+:root {
+  --green: #1B5E20; --green-deep: #0E3A12; --green-line: #2E7A33;
+  --gold: #F2B83A; --cream: #F5F0E8; --red: #E3201B; --ink: #0A2A10; --muted: #B9CDB6;
+  --display: "Bebas Neue", "Oswald", "Arial Narrow", Impact, sans-serif;
+  --body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+html, body { background: var(--green-deep); color: var(--cream); margin: 0; }
+body {
+  font-family: var(--body); font-size: 17px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 48px;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(242,184,58,.16), transparent 60%);
+  min-height: 100vh; box-sizing: border-box;
+}
+main { max-width: 520px; margin: 0 auto; display: grid; gap: 22px; text-align: center; justify-items: center; }
+.badge { width: min(240px, 60vw); height: auto; filter: drop-shadow(0 14px 30px rgba(0,0,0,.4)); }
+h1 { font: 400 clamp(40px, 11vw, 64px)/0.92 var(--display); letter-spacing: .02em; margin: 0; text-wrap: balance; }
+.tag { color: var(--muted); margin: 0; max-width: 34ch; }
+.thread { width: 180px; height: 14px; }
+.links { display: grid; gap: 12px; width: 100%; }
+.links a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none;
+  font: 400 24px/1 var(--display); letter-spacing: .06em; padding: 16px 20px; border-radius: 6px;
+  color: var(--cream); border: 2px solid var(--green-line); background: rgba(10,42,16,.5);
+}
+.links a:hover { border-color: var(--gold); }
+.links a.primary { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.links a.primary:hover { background: #FFC94D; }
+.links a:focus-visible { outline: 3px solid var(--cream); outline-offset: 2px; }
+.links small { font: 700 13px/1 var(--body); letter-spacing: .04em; opacity: .8; }
+footer { color: var(--muted); font-size: 13px; }
+footer a { color: var(--gold); }
+</style>
+</head>
+<body>
+<main>
+  <img class="badge" src="/assets/logo.webp" alt="Sporting Yarns badge" width="400" height="380">
+  <h1>A good yarn about Australian sport</h1>
+  <p class="tag">Stories you forgot, or never knew. The underdogs, the overlooked and the ones that got away.</p>
+  <svg class="thread" viewBox="0 0 180 14" aria-hidden="true"><path d="M4 8 C 50 0, 110 16, 176 6" fill="none" stroke="#E3201B" stroke-width="5" stroke-linecap="round"/></svg>
+  <nav class="links" aria-label="Sporting Yarns links">
+    <a class="primary" href="/quiz/">Play today's quiz</a>
+    <a href="https://www.instagram.com/sportingyarns/" rel="noopener">Follow on Instagram <small>@sportingyarns</small></a>
+    <a href="https://linktr.ee/sportingyarns" rel="noopener">Books and more</a>
+  </nav>
+  <footer>Collabs: <a href="mailto:sportingyarns@gmail.com">sportingyarns@gmail.com</a></footer>
+</main>
+</body>
+</html>
